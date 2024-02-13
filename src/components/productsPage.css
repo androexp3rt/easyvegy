@@ -1,0 +1,23 @@
+.productsComponent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.pgrid {
+    width: calc(100% - 20px);
+    min-height: calc(50vh - 20px);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+@media only screen and (max-width: 1024px) {
+    .pgrid {
+        width: calc(100% - 20px);
+        min-height: calc(50vh - 20px);
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.Navbar {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    height: calc(10vh - 20px);
+    width: calc(100% - 20px);
+    padding: 10px;
+    > .NavLogoContainer {
+        width: 4%;
+        height: 100%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        background-color: beige;
+        > .NavLogoContainer img {
+            height: 100%;
+            pointer-events: none;
+        }
+    }
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .NavLogoContainer img {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+    > .NavMenuContainer {
+        position: relative;
+        width: 70%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        list-style-type: none;
+        font-size: 1.2rem;
+        > .searchLocationContainer {
+            width: 60%;
+            height: 100%;
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            > .searchBar {
+                width: calc(100% - 35px);
+                height: calc(65% - 10px);
+                border-radius: 10px;
+                border: none;
+                padding: 5px 0;
+                padding-left: 35px;
+                font-size: 1.1rem;
+            }
+            > .searchBar:focus{
+                outline: none;
+            }
+            > .searchBtnContainer{
+                position: absolute;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                width: calc(6% - 20px);
+                height: calc(65% - 10px);
+                padding: 5px 10px;
+                top: 0;
+                left: 0;
+                > .goBtn{
+                    display: none;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0 10px;
+                    font-size: 0.9rem;
+                    font-weight: bold;
+                }
+                > .searchIcon {
+                    height: 1.4vw;
+                }
+            }
+            > .userLocationDisplay {
+                display: flex;
+                width: calc(100% - 35px);
+                height: 30%;
+                padding-left: 35px;
+                font-size: 0.9rem;
+                color: azure;
+                align-items: center;
+                > .dropdownArrow {
+                    display: flex;
+                    margin-left: 10px;
+                    height: 5px;
+                    width: 5px;
+                    transform: rotate(-45deg);
+                    border-left: 2px solid #ffffff;
+                    border-bottom: 2px solid #ffffff;
+                }
+            }
+        }
+        > .gtcBtn {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            width: 9vw;
+            height: calc(7vh - 10px);
+            padding: 5px 3vw;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+            background-color: greenyellow;
+            cursor: pointer;
+            > .gtcBtnIcon {
+                height: 100%;
+            }
+        }
+    }
+    >.NavBtnContainer {
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        > div.pBtn {
+            width: 30%;
+            height: 40%;
+            padding: 5px 10px;
+            color: gold;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: rgba(255,255,255,0.2);
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .NavLogoContainer {
+        width: 50%;
+    }
+    .NavMenuContainer, .NavBtnContainer {
+        width: 100%;
+        height: fit-content;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+        top:0;
+        left:0;
+        list-style-type: none;
+        > li , div {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 6vh;
+            color: grey;
+            font-size: 1.5rem;
+            border-bottom: 1px solid grey;
+            a {
+                color: grey;
+                text-decoration: none;
+            }
+        }
+        li:hover, div:hover {
+            background-color:rgba(0,0,0,0.2);
+            color: gold;
+            border-bottom: 1px solid gold;
+            a {
+                color: gold;
+            }
+        }
+    }
+}
