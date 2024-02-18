@@ -1,5 +1,5 @@
 import './productsPage.css';
-import Product from './product.jsx';
+import Product from './product';
 import {Component} from 'react';
 import axios from 'axios';
 
@@ -10,7 +10,7 @@ export default class ProductsPage extends Component {
         this.state = {products: null};
     }
     async getProducts() {
-        const { data } = await axios.get('http://localhost:4000/products');
+        const { data } = await axios.get('http://192.168.1.2:4000/products');
         this.setState({products : data});
     }
     componentDidMount() {
@@ -20,13 +20,14 @@ export default class ProductsPage extends Component {
         if (!this.state.products) return (<div className="productsComponent"><h1>Products :</h1><p>No Products here</p></div>)
         return (
             <div className="productsComponent">
-                {/* header */}
+                <div className='header'><p>Products :</p></div>
                 <div className="pgrid">
                     {this.state.products.map((p) => {
-                        return <Product key={p.key} data={p}/>
+                        return <Product key={p.sno} data={p}/>
                         })
                     }
                 </div>
+                <div className='header'><p>Products :</p></div>
             </div>
         );
     }

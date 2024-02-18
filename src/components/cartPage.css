@@ -1,175 +1,160 @@
-:root {
-    --scrollbarwidth: calc(100vw - 100%);
-}
-
-.outerContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    padding: 5px;
-    border-radius: 10px;
-    background-color: grey;
-    color: black;
-}
-
 .cartComponent {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     width: calc(100% - 20px);
-    height: calc(100% - 20px);
     padding: 10px;
 
-    >.cartDetailsContainer {
-        width: calc(50% - 20px);
-        height: calc(100% - 10px);
+    .cartDetailsAddressContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px;
 
-        >p {
-            text-align: left;
-            height: 10%;
-            width: calc(100% - 15px);
-            padding-left: 15px;
-            font-size: 1.8rem;
-            font-weight: bold;
-            overflow: hidden;
-        }
-
-        >.cartItemsContainer {
+        >.cartDetailsContainer {
+            width: calc(50% - 20px);
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
-            width: calc(100% - 30px);
-            padding: 0px 15px;
-            height: 70%;
-            overflow: hidden;
-            overflow-y: scroll;
+            align-items: center;
+            padding: 5px;
+            border-radius: 10px;
+            background-color: grey;
+            color: black;
 
-            .cartItem {
+            >p {
+                text-align: left;
+                width: calc(100% - 15px);
+                padding-left: 15px;
+                font-size: 1.8rem;
+                font-weight: bold;
+            }
+
+            >.cartItemsContainer {
                 display: flex;
-                align-items: center;
-                justify-content: space-between;
-                position: relative;
-                width: calc(100% - 20px);
-                height: calc(30% - 20px);
-                padding: 10px;
-                margin-bottom: 5px;
-                background-color: rgba(255, 255, 255, 0.5);
-                border-radius: 10px;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                width: calc(100% - 30px);
+                height: 40vh;
+                overflow: auto;
+                padding: 10px 15px;
 
-                >.removeFromCartbtn {
-                    text-align: center;
-                    position: absolute;
-                    top: 5px;
-                    right: 5px;
-                    height: 1vw;
-                    width: 1vw;
-                    font-size: 0.6rem;
-                    border-radius: 60px;
-                    overflow: hidden;
-                    background-color: red;
-                    color: white;
-                    cursor: pointer;
-                }
-
-                >.cartItemImage {
-                    width: 8%;
-                    background-color: beige;
-                    border-radius: 10px;
-                }
-
-                >.detailsContainer {
-                    width: 68%;
-                    height: calc(100%) - 20px;
-                    padding: 10px 0;
+                .cartItem {
                     display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    justify-content: flex-start;
-
-                    >.cartItemdetail {
-                        display: flex;
-                        align-items: center;
-                        font-size: 0.7rem;
-                        font-weight: bold;
-                        height: 20%;
-                        color: black;
-                    }
-
-                    >.cartItemdetail:nth-child(1) {
-                        font-size: 1rem;
-                        color: blue;
-                        margin-bottom: 5px;
-                    }
-                }
-
-                >.btnContainer {
-                    width: 20%;
                     align-items: center;
-                    justify-content: space-around;
+                    justify-content: space-between;
+                    position: relative;
+                    width: calc(100% - 20px);
+                    padding: 10px;
+                    margin-bottom: 5px;
+                    background-color: rgba(255, 255, 255, 0.7);
+                    border-radius: 10px;
 
-                    >.plusMinusBtns {
+                    >.removeFromCartbtn {
+                        position: absolute;
+                        top: 5px;
+                        right: 5px;
+                        height: 20px;
+                        width: 20px;
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        height: 4vh;
-                        width: 100%;
-                        border-radius: 15px;
-                        background-color: greenyellow;
-                        font-size: 0.8rem;
+                        border: none;
+                        border-radius: 60px;
+                        font-size: 0.9rem;
                         font-weight: bold;
-                        overflow: hidden;
+                        background-color: #ff0000;
+                        color: white;
                         cursor: pointer;
 
-                        >span {
-                            width: 30%;
-                            height: 4vh;
-                            text-align: center;
-                            line-height: 3.5vh;
-                            font-size: 1.5rem;
+                        >img {
+                            width: 100%;
+                        }
+                    }
+
+                    >.cartItemImage {
+                        width: 10%;
+                        background-color: beige;
+                        border-radius: 10px;
+                    }
+
+                    >.detailsContainer {
+                        width: 60%;
+                        padding: 10px 0;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+
+                        >.cartItemdetail {
+                            display: flex;
+                            align-items: center;
+                            font-size: 0.7rem;
                             font-weight: bold;
-                            background-color: rgb(247, 140, 105);
+                            color: black;
                         }
 
-                        >span:nth-child(2) {
+                        >.cartItemdetail:nth-child(1) {
+                            font-size: 1rem;
+                            color: blue;
+                            margin-bottom: 5px;
+                        }
+                    }
+
+                    >.btnContainer {
+                        width: 20%;
+                        padding-right: 6%;
+                        align-items: center;
+                        justify-content: space-around;
+
+                        >.plusMinusBtns {
                             display: flex;
-                            justify-content: center;
                             align-items: center;
-                            width: 40%;
-                            height: 3vh;
+                            justify-content: center;
+                            height: 5vh;
+                            width: 100%;
+                            border-radius: 15px;
                             font-size: 0.8rem;
-                            background-color: unset;
+                            font-weight: bold;
+                            overflow: hidden;
+                            cursor: pointer;
+
+                            >span {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                width: 30%;
+                                height: 100%;
+                                font-size: 1.5rem;
+                                font-weight: bold;
+                                background-color: rgb(247, 140, 105);
+                            }
+
+                            >span:nth-child(2) {
+                                width: 40%;
+                                height: 100%;
+                                font-size: 0.8rem;
+                                background-color: greenyellow;
+                            }
                         }
                     }
                 }
             }
-        }
 
-        >.subTotalContainer {
-            height: calc(20% - 15px);
-            width: calc(100% - 20px);
-            padding: 5px 10px 10px 10px;
-
-            >div {
+            >.subTotalContainer {
+                width: calc(100% - 40px);
+                padding: 5px 10px;
+                border-top: 2px solid black;
                 display: flex;
                 align-items: flex-start;
                 justify-content: space-between;
-                width: calc(100% - 10px);
-                height: calc(100% - 5px);
-                padding: 0 5px;
-                padding-top: 5px;
-                border-top: 2px solid black;
 
                 >.billContainer {
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
                     justify-content: flex-start;
-                    height: 100%;
                     width: 60%;
 
                     >div {
@@ -177,7 +162,6 @@
                         align-items: center;
                         justify-content: space-between;
                         width: 100%;
-                        height: 25%;
                         color: black;
                         font-size: 0.8rem;
                         font-weight: bold;
@@ -192,7 +176,6 @@
                             align-items: center;
                             justify-content: space-between;
                             width: 30%;
-                            height: 100%;
                         }
                     }
 
@@ -208,125 +191,131 @@
                 >.checkOutBtnContainer {
                     display: flex;
                     flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    height: 100%;
+                    align-items: flex-end;
                     width: 40%;
 
                     >.checkOutBtn {
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        width: 5vw;
-                        height: 5vh;
-                        padding: 5px;
+                        padding: 15px;
+                        margin-top: 1.5vh;
                         background-color: greenyellow;
                         color: black;
                         font-size: 1rem;
                         font-weight: bold;
+                        border: none;
                         border-radius: 10px;
                     }
                 }
             }
         }
-    }
 
-    >.AddressRecomendatiosContainer {
-        width: calc(50% - 20px);
-        height: 100%;
-        padding: 0 5px;
-        background-color: unset;
-
-        >.savedAddressesContainer {
-            width: calc(100% - 20px);
-            height: calc(50% - 30px);
-            padding: 10px;
+        >.AddressRecomendatiosContainer {
+            width: calc(50% - 20px);
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
-            background-color: rgba(0, 222, 0, 0.2);
+            align-items: center;
+            padding: 5px;
             border-radius: 10px;
+            background-color: unset;
+            color: black;
+            padding: 0 5px;
 
-            >p {
-                height: 15%;
-                font-weight: bold;
-            }
-
-            >.listofaddresses {
+            >.savedAddressesContainer {
+                width: calc(100% - 20px);
+                /* height: calc(50% - 30px); */
+                padding: 10px;
                 display: flex;
                 flex-direction: column;
-                justify-content: flex-start;
                 align-items: flex-start;
-                width: 100%;
-                height: 70%;
-                list-style-type: none;
-
-                >.address {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    width: calc(100% - 20px);
-                    height: 30%;
-                    padding: 0 10px;
-                    margin-bottom: 5px;
-                    >.removeAddressbtn {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        width: calc(4vw - 10px);
-                        height: calc(70% - 10px);
-                        padding: 5px;
-                        background-color: red;
-                        color: black;
-                        font-size: 1rem;
-                        font-weight: bold;
-                        border-radius: 10px;
-                    }
-                }
-            }
-
-            .addAddressBtn {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: flex-start;        
-                width: calc(20% - 20px);
-                height: calc(15% - 10px);
-                padding: 5px 10px;
-                font-size: 0.8rem;
-                background-color: greenyellow;
+                justify-content: flex-start;
+                background-color: rgba(0, 222, 0, 0.2);
                 border-radius: 10px;
-                color: black;
-                > p {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;                    
-                    width: calc(100% - 10px);
-                    height: 100%;
-                    padding: 0 5px;
-                    overflow: hidden;
-                    font-size: 0.9rem;
+
+                >p {
+                    height: 15%;
                     font-weight: bold;
-                    > span {
+                }
+
+                >.listofaddresses {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    width: 100%;
+                    /* height: 70%; */
+                    list-style-type: none;
+
+                    >.address {
                         display: flex;
                         align-items: center;
-                        justify-content: center;
-                        height: calc(100% - 5px);
-                        padding-bottom: 5px;
-                        width: 15%;
-                        font-size: 1.5rem;
+                        justify-content: space-between;
+                        width: calc(100% - 20px);
+                        /* height: 30%; */
+                        padding: 0 10px;
+                        margin-bottom: 5px;
+
+                        >.removeAddressbtn {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: calc(4vw - 10px);
+                            /* height: calc(70% - 10px); */
+                            padding: 5px;
+                            background-color: red;
+                            color: black;
+                            font-size: 1rem;
+                            font-weight: bold;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+
+                .addAddressBtn {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;
+                    width: calc(20% - 20px);
+                    /* height: calc(15% - 10px); */
+                    padding: 5px 10px;
+                    font-size: 0.8rem;
+                    background-color: greenyellow;
+                    border-radius: 10px;
+                    color: black;
+
+                    >p {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        width: calc(100% - 10px);
+                        /* height: 100%; */
+                        padding: 0 5px;
+                        overflow: hidden;
+                        font-size: 0.9rem;
                         font-weight: bold;
+
+                        >span {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            /* height: calc(100% - 5px); */
+                            padding-bottom: 5px;
+                            width: 15%;
+                            font-size: 1.5rem;
+                            font-weight: bold;
+                        }
                     }
                 }
             }
-        }
 
-        >.recomendationsContainer {
-            width: 100%;
-            height: calc(50% - 10px);
-            background-color: rgba(220, 243, 0, 0.2);
-            border-radius: 10px;
+            >.recomendationsContainer {
+                width: 100%;
+                /* height: calc(50% - 10px); */
+                background-color: rgba(220, 243, 0, 0.2);
+                border-radius: 10px;
+            }
         }
     }
 }

@@ -12,37 +12,34 @@
         align-items: center;
         justify-content: flex-start;
         width: 35%;
-        height: 90%;
         > h3 {
             color: greenyellow;
-            height: 10%;
+            padding: 10px;
         }
-        > p.error {
+        > .error {
             width: 30%;
-            height: 5%;
             font-size: 0.8rem;
+            padding: 5px;
             color: red;
         }
-        > div.input {
+        > .input {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: flex-start;
             width: 100%;
-            height: 15%;
             font-size: 1rem;
             margin-bottom: 10px;
             > label {
                 color: greenyellow;
                 margin-bottom: 2px;
-                font-size: 1.3rem;
+                font-size: 1rem;
             }
             > input {
                 border: none;
                 border-radius: 10px;
-                flex: 1;
                 width: calc(100% - 20px);
-                padding: 0 10px;
+                padding: 7px 10px;
                 color: black;
             }
             > input:focus {
@@ -50,46 +47,13 @@
                 outline: none;
             }
         }
-        > div:nth-child(8){
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: calc(15% - 10px);
-            height: calc(10% - 10px);
-            padding: 5px;
-            background-color: greenyellow;
-            border-radius: 10px;
-            color: black;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-        }
     }
     >p {
-        position: absolute;
-        top: 90%;
         display: flex;
         align-items: center;
         justify-content: center;
         width: 35%;
-        height: 10%;
         font-size: 1rem;
-
-        >span {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: calc(15% - 10px);
-            height: calc(70% - 10px);
-            margin-left: 5px;
-            background-color: greenyellow;
-            border-radius: 10px;
-            color: black;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-        }
+        margin-top: 15px;
     }
 }

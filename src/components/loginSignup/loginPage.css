@@ -1,0 +1,75 @@
+.loginFormContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+    > form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 35%;
+        padding: 10px 0;
+        >h3 {
+            color: greenyellow;
+            padding: 10px;
+        }
+        >.error {
+            width: 30%;
+            font-size: 0.9rem;
+            color: red;
+            padding: 5px;
+        }
+        >.input {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            width: 100%;
+            margin-bottom: 10px;
+            >label {
+                color: greenyellow;
+                margin-bottom: 2px;
+                font-size: 1.2rem;
+            }
+            >input {
+                border: none;
+                border-radius: 10px;
+                width: calc(100% - 20px);
+                padding: 10px;
+                color: black;
+            }
+            >input:focus {
+                outline: none;
+            }
+        }
+    }
+    >p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35%;
+        font-size: 1rem;
+        margin-top: 20px;
+    }
+    >.forgotPasswordBtn {
+        padding: 15px;
+        color: white;
+        background-color: unset;
+        border: none;
+        font-size: 0.9rem;
+        cursor: pointer;
+    }
+}
+.pBtn {
+    padding: 10px;
+    background-color: greenyellow;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}

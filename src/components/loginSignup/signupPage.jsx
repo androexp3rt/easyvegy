@@ -1,8 +1,8 @@
-import "./signupForm.css";
+import "./signupPage.css";
 import { Component } from "react";
 import axios from "axios";
 
-export default class SignUpForm extends Component{
+export default class SignUpPage extends Component{
     constructor(props) {
         super(props);
         this.state = {resp:""}
@@ -26,7 +26,7 @@ export default class SignUpForm extends Component{
         if(/[^a-zA-z]+$/.test(toString(cred.userName))){
 
         } else {
-            await axios.post("http://localhost:40000/register",cred).then((req,res) => {
+            await axios.post("http://192.168.1.2:40000/register",cred).then((req,res) => {
                 this.setState({resp:toString(res)})
                 this.register()
                 return
@@ -34,10 +34,9 @@ export default class SignUpForm extends Component{
         }
     }
     register = () => {
-        //write to database
         this.props.handleAppChange('login',false)
     }
-    goToLoginForm = () => {
+    goToLoginPage = () => {
         this.props.handleAppChange("login",false)
     }
     render() {
@@ -51,9 +50,9 @@ export default class SignUpForm extends Component{
                     <div className='input'><label>UserName :</label><input name="userName" type='text'/></div>
                     <div className='input'><label>Email :</label><input name="email" type='email'/></div>
                     <div className='input'><label>Password :</label><input name="password" type='password'/></div>
-                    <div className='submitbtn' onClick={e => this.submit(e)}>Submit</div>
+                    <button className='submitbtn pBtn' onClick={e => this.submit(e)}>Submit</button>
                 </form>
-                <p>Allready a User? Please <span className='signupbtn' onClick={this.goToLoginForm}>Login</span></p>
+                <p>Allready a User? Please &nbsp;<button className='signupbtn  pBtn' onClick={this.goToLoginPage}>Login</button></p>
             </div>
         )    
     }

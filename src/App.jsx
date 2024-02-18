@@ -2,7 +2,9 @@ import Navbar from './components/navbar';
 import ProductsPage from './components/productsPage';
 import CartPage from './components/cartPage';
 import CheckOutPage from './components/checkoutPage'
-import LoginPage from './components/loginSignup/loginSignupPage';
+import LoginPage from './components/loginSignup/loginPage';
+import SignUpPage from './components/loginSignup/signupPage';
+import ForgotPassword from './components/loginSignup/forgotPasswordPage';
 import Footer from './components/footer';
 import './App.css';
 import { Component } from 'react';
@@ -36,12 +38,22 @@ class App extends Component{
             localStorage.setItem('order', JSON.stringify(order))
         }
     }
+    display = (name) => {
+        var names = {}
+        names.products = <ProductsPage handleAppChange={this.handleAppChange}/>
+        names.cart = <CartPage handleAppChange={this.handleAppChange}/>
+        names.checkout = <CheckOutPage order={this.state.order?this.state.order:{}} />
+        names.login = <LoginPage handleAppChange={this.handleAppChange} />
+        names.signup = <SignUpPage handleAppChange={this.handleAppChange} />
+        names.forgotPassword = <ForgotPassword handleAppChange={this.handleAppChange} />
+        return names[name] 
+    }
     render() {
         return (
             <div className="App">
                 <Navbar handleAppChange={this.handleAppChange} name={this.state.name} isLoggedIn={this.state.isLoggedIn}/>
                 <div className="App-body">
-                    {this.state.name === 'products' ? <ProductsPage handleAppChange={this.handleAppChange}/> : this.state.name === 'cart' ? <CartPage handleAppChange={this.handleAppChange}/> : this.state.name === 'checkout'? <CheckOutPage order={this.state.order?this.state.order:{}} />:<LoginPage handleAppChange={this.handleAppChange} name={this.state.name} /> }
+                    {this.display(this.state.name)}
                 </div>
                 <Footer />
             </div>
