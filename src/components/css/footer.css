@@ -1,0 +1,197 @@
+.footerContainer {
+  width: 100vw;
+  background-color: beige;
+  > .footerHead {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-items: space-between;
+    border-bottom: 2px solid black;
+    > .footerMenuContainer {
+      display: flex;
+      flex-direction: row;
+      width: 33vw;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1vw;
+      list-style-type: none;
+      > li > a {
+        text-decoration: none;
+        color: rgb(199, 57, 57);
+        font-size: 1.2vw;
+      }
+    }
+    .footerLogoContainer {
+      width: 28vw;
+      padding: 1vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      > img {
+        width: 6vw;
+        background-color: greenyellow;
+        border-radius: 10px;
+      }
+      > p {
+        width: 28vw;
+        padding: 1vw;
+        text-align: center;
+        font-size: 1.3vw;
+        font-weight: 600;
+      }
+
+      > div {
+        width: 12vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        > img {
+          width: 27%;
+        }
+      }
+    }
+    .footerNewsletterContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 33vw;
+      padding: 1vw;
+      > p {
+        width: 33vw;
+        font-size: 2vw;
+        color: brown;
+      }
+      > div {
+        width: 30vw;
+        padding: 1.5vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        > input {
+          width: 18vw;
+          height: 1.5vw;
+          border-radius: 10px;
+          font-size: 1.2vw;
+          padding: 1vw;
+          border: none;
+        }
+        > input:focus {
+          outline: none;
+        }
+        > button {
+          width: 8vw;
+          height: 3.5vw;
+          padding: 1vw;
+          border: none;
+          background-color: burlywood;
+          color: #000;
+          font-size: 1vw;
+          font-weight: 600;
+          border-radius: 15px;
+          box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.6);
+        }
+      }
+    }
+  }
+
+  .footerFoot {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: black;
+
+    > p {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      color: rgb(199, 57, 57);
+      > a {
+        text-decoration: none;
+        font-size: 1vw;
+        padding: 0.5vw;
+        color: rgb(199, 57, 57);
+      }
+
+      > span {
+        width: 1vw;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .footerContainer {
+    width: 100vw;
+    background-color: beige;
+    > .footerHead {
+      > .footerMenuContainer {
+        flex-direction: column;
+        width: 24vw;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        > li > a {
+          font-size: 3vw;
+          color: rgb(24, 56, 2);
+        }
+      }
+      .footerLogoContainer {
+        width: 46vw;
+        > img {
+          width: 10vw;
+        }
+        > p {
+          width: 46vw;
+          font-size: 3vw;
+        }
+
+        > div {
+          width: 30vw;
+        }
+      }
+      .footerNewsletterContainer {
+        width: 24vw;
+        > p {
+          width: 24vw;
+          font-size: 3vw;
+        }
+        > div {
+          width: 20vw;
+          flex-direction: column;
+          align-items: center;
+          > input {
+            height: 2vw;
+            font-size: 2vw;
+            margin-bottom: 2vw;
+          }
+          > button {
+            width: 15vw;
+            font-size: 2vw;
+          }
+        }
+      }
+    }
+    .footerFoot {
+      > p {
+        color: rgb(24, 56, 2);
+        > a {
+          font-size: 2vw;
+          color: rgb(24, 56, 2);
+        }
+
+        > span {
+          width: 2vw;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 425px) {
+}

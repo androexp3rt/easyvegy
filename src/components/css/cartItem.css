@@ -1,0 +1,196 @@
+.cartItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 1vw;
+  margin-bottom: 0.5vw;
+  background-color: #ffffff;
+  border-radius: 10px;
+
+  > .removeFromCartBtn {
+    position: absolute;
+    top: 0.5vw;
+    right: 0.5vw;
+    height: 2vw;
+    width: 2vw;
+    border: none;
+    border-radius: 50%;
+    font-size: 1vw;
+    font-weight: bold;
+    background-color: #ff0000;
+    color: white;
+    cursor: pointer;
+  }
+  > .cartItemImageContainer {
+    width: 8vw;
+    height: 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    > .cartItemImage {
+      max-width: 6vw;
+      max-height: 6vw;
+    }
+  }
+
+  > .detailsContainer {
+    width: 22vw;
+    padding: 1vw;
+
+    > .cartItemDetail {
+      display: flex;
+      font-size: 1vw;
+      font-weight: bold;
+      text-align: start;
+      color: black;
+      > span:first-child {
+        width: 8vw;
+      }
+    }
+
+    > .cartItemDetail:first-child {
+      font-size: 1.5vw;
+      color: blue;
+      margin-bottom: 0.5vw;
+    }
+  }
+
+  > .btnContainer {
+    width: 9vw;
+    margin-right: 2vw;
+    align-items: center;
+    justify-content: space-around;
+
+    > .setQtyBtn {
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      height: 3vw;
+      border: none;
+      border-radius: 10px;
+      background-color: bisque;
+      overflow: hidden;
+      > span {
+        width: 20%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2vw;
+        font-weight: bold;
+        background-color: gray;
+        cursor: pointer;
+      }
+      > form.qty {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: unset;
+        cursor: text;
+        > label {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          font-size: 1vw;
+          font-weight: bold;
+          margin-bottom: 0.15vw;
+        }
+        > span {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          font-size: 1vw;
+          font-weight: bold;
+          > input {
+            width: 60%;
+            text-align: center;
+            font-size: 1vw;
+            font-weight: bold;
+            border: none;
+            background-color: unset;
+          }
+          > input:focus {
+            outline: none;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 760px) {
+  .cartItem {
+    padding: 1vw;
+    margin-bottom: 1vw;
+
+    > .removeFromCartBtn {
+      top: 1vw;
+      right: 1vw;
+      height: 5vw;
+      width: 5vw;
+      font-size: 2.5vw;
+    }
+    > .cartItemImageContainer {
+      width: 16vw;
+      height: 16vw;
+      > .cartItemImage {
+        max-width: 12vw;
+        max-height: 12vw;
+      }
+    }
+
+    > .detailsContainer {
+      width: 44vw;
+      padding: 1.5vw;
+
+      > .cartItemDetail {
+        font-size: 3vw;
+        > span:first-child {
+          width: 22vw;
+        }
+      }
+
+      > .cartItemDetail:first-child {
+        font-size: 4vw;
+      }
+    }
+
+    > .btnContainer {
+      width: 18vw;
+      align-self: flex-end;
+      margin-bottom: 3vw;
+      margin-right: 5vw;
+
+      > .setQtyBtn {
+        width: 18vw;
+        height: 6vw;
+        border-radius: 5px;
+        > span {
+          width: 4vw;
+          font-size: 3.5vw;
+        }
+        > form.qty {
+          width: 10vw;
+          > label {
+            font-size: 2.5vw;
+            margin-bottom: 0.1vw;
+          }
+          > span {
+            font-size: 2.5vw;
+            > input {
+              width: 6vw;
+              font-size: 2.5vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 425px) {
+}

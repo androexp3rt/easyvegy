@@ -1,24 +1,20 @@
-<svg width="100%" height="100%" viewBox="-50 -50 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <!-- letter V-->
-    <path d="M-30 -25 L-20 -6 L-10 -25 M0 0 Z" fill="none" stroke="#008000" stroke-width="2"></path>
-    <!-- letter e-->
-    <path d="M-8 -16 L11 -16 A10,9 360 1 0 10,-10 M0 0 Z" fill="none" stroke="#008000" stroke-width="2"></path>
-    <!-- letter g-->
-    <path d="M30 -8 L30 -23 A9,8 360 1 0 30,-10 L30 -7 C30,-7 23,0 16,-7 M0 0  Z" fill="none" stroke="#008000" stroke-width="2"></path>
+<svg width="100%" height="100%" viewBox="-55 -55 110 110" fill="" xmlns="http://www.w3.org/2000/svg">
     <!-- letter E-->
-    <path d="M-20 6 L-40 4 L-40 17 L-30 17 M-40 17 L-40 30 L-20 28 M0 0 Z" fill="none" stroke="#61DAFB" stroke-width="2"></path>
+    <path d="M-20 -25 L-40 -25 L-40 -12 L-30 -12 M-40 -12 L-40 1 L-20 -1 M0 0 Z" fill="none" stroke="#000" stroke-width="2"></path>
     <!-- letter A-->
-    <path d="M-18 30 L-8 4 L2 30 L-13 20 M0 0 Z" fill="none" stroke="#61DAFB" stroke-width="2"></path>
+    <path d="M-18 1 L-8 -25 L2 1 L-13 -9 M0 0 Z" fill="none" stroke="#000" stroke-width="2"></path>
     <!-- letter S-->
-    <path d="M24 10 A10,9 360 1 0 4,16 C4,16 9,19 14,17 C14,17 19,15 24,19 A10,10 360 0 1 4,22 M0 0  Z" fill="none" stroke="#61DAFB" stroke-width="2"></path>
+    <path d="M24 -20 A10,9 360 1 0 4,-14 C4,-14 9,-11 14,-13 C14,-13 19,-15 24,-11 A10,10 360 0 1 4,-8 M0 0 Z" fill="none" stroke="#000" stroke-width="2"></path>
     <!-- letter Y-->
-    <path d="M26 4 L36 17 L46 4 M36 17 L36 30 M0 0 Z" fill="none" stroke="#61DAFB" stroke-width="2"></path>
-
-    <!-- <circle cx="0" cy="0" r="2" fill="#61DAFB"></circle>
-    <path d="M 0 2 L 2 0 L 0 -2 L -2 0 Z" fill="#61DAFB"></path>
-    <g stroke="#61DAFB" stroke-width="1" fill="none">
-        <ellipse rx="8" ry="4.5"></ellipse>
-        <ellipse rx="8" ry="4.5" transform="rotate(60)"></ellipse>
-        <ellipse rx="8" ry="4.5" transform="rotate(120)"></ellipse>
-    </g> -->
+    <!-- <path d="M26 -26 L36 -13 L46 -26 M36 -13 L36 0 M0 0 Z" fill="none" stroke="#61DAFB" stroke-width="2"></path> -->
+    <path d="M26 -26 L36 -13 L46 -26 M36 -13 L36 0 M0 0 Z" fill="none" stroke="#000" stroke-width="2"></path>
+    <!-- letter V-->
+    <!-- <path d="M-40 5 L-30 25 L-20 5 M0 0 Z" fill="none" stroke="#008000" stroke-width="2"></path> -->
+    <path d="M-40 5 L-30 25 L-20 5 M0 0 Z" fill="none" stroke="#000" stroke-width="2"></path>
+    <!-- letter e-->
+    <path d="M-20 16 L1 16 A10,9 360 1 0 -1,22 M0 0 Z" fill="none" stroke="#000" stroke-width="2"></path>
+    <!-- letter g-->
+    <path d="M21 25 L21 10 A9,8 360 1 0 21,23 L21 24 C21,24 12,40 6,24 M0 0  Z" fill="none" stroke="#000" stroke-width="2"></path>
+    <!-- letter y-->
+    <path d="M26 8 C26,8 30,35 41,8 C41,8 38,26 26,30 M0 0 Z" fill="none" stroke="#000" stroke-width="2"></path>
 </svg>

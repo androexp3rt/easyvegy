@@ -1,0 +1,365 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1vw;
+  border: none;
+  border-radius: 10px;
+  background-color: unset;
+  cursor: pointer;
+}
+.button:focus {
+  outline: none;
+}
+@keyframes searchIconLR {
+  0% {
+    left: unset;
+    right: 90.5%;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    left: unset;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+@keyframes searchIconRL {
+  0% {
+    left: 90.5%;
+    right: unset;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    left: 0;
+    right: unset;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+.animateLTR {
+  animation: searchIconLR 1s ease-in-out;
+}
+.animateRTL {
+  animation: searchIconRL 1s ease-in-out;
+}
+
+.Navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  width: 96vw;
+  padding: 1vw 2vw;
+  color: white;
+
+  > .NavLogoContainer {
+    width: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: greenyellow;
+    border-radius: 10px;
+
+    > img {
+      width: 5vw;
+      pointer-events: none;
+    }
+  }
+
+  > .NavSearchLocationContainer {
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    > .searchContainer {
+      width: 40vw;
+      display: flex;
+      position: relative;
+      > .searchBar {
+        flex: 1;
+        height: 1.5vw;
+        border-radius: 10px;
+        border: none;
+        padding: 1vw 0 1vw 3vw;
+        font-size: medium;
+        margin-bottom: 0.25vw;
+      }
+
+      > .searchBar:focus {
+        outline: none;
+      }
+
+      > .goBtn {
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 60px;
+        z-index: 10;
+        > img {
+          width: 1.5vw;
+        }
+      }
+    }
+
+    > .locationContainer {
+      display: flex;
+      align-items: center;
+      width: 40vw;
+      padding-left: 1vw;
+
+      > .locationIconWrap {
+        padding: 0;
+        border-radius: 60px;
+        margin-right: 0.5vw;
+        background-color: #ffffff;
+        > img {
+          width: 1.5vw;
+        }
+      }
+
+      > .locationSelector {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        font-size: 1vw;
+        color: #ffffff;
+      }
+
+      > .locationSelector::after {
+        content: "";
+        display: flex;
+        margin-left: 0.5vw;
+        font-weight: bold;
+        width: 0.4vw;
+        height: 0.4vw;
+        transform: rotate(45deg);
+        border-right: 2px solid #ffffff;
+        border-bottom: 2px solid #ffffff;
+      }
+      @media only screen and (max-width: 1024px) {
+        .locationSelector::after {
+          transform: translateY(-0.15vw) rotate(45deg);
+        }
+      }
+    }
+  }
+  > .NavBtnContainer {
+    width: 40vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    > .gtcBtn {
+      background-color: rgb(173, 255, 47);
+      font-size: 1.2vw;
+      font-weight: bold;
+      > img {
+        width: 2.5vw;
+        margin-right: 0.5vw;
+      }
+      > span {
+        width: 6vw;
+        display: flex;
+        place-items: center center;
+      }
+    }
+    > .NavBtn {
+      background-color: greenyellow;
+      font-size: 1.2vw;
+      font-weight: bold;
+      > img {
+        display: none;
+      }
+    }
+  }
+}
+
+/* Media queries for different screen sizes/breakpoints */
+
+/* Adjustments for Tablets screens */
+@media only screen and (max-width: 760px) {
+  @keyframes searchIconLR {
+    0% {
+      background-color: #ffffff;
+    }
+    100% {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+  @keyframes searchIconRL {
+    0% {
+      left: 34vw;
+      right: unset;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+    100% {
+      left: 0;
+      right: unset;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+  @keyframes openLocation {
+    0% {
+      width: 6vw;
+    }
+    100% {
+      width: 53vw;
+    }
+  }
+  @keyframes closeLocation {
+    0% {
+      width: 53vw;
+    }
+    100% {
+      width: 6vw;
+    }
+  }
+  @keyframes opaque {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes notOpaque {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .animateOpenLocation {
+    animation: openLocation 1s ease-in-out;
+    > span {
+      animation: notOpaque 1s ease-in-out;
+    }
+  }
+  .animateCloseLocation {
+    animation: closeLocation 1s ease-in-out;
+    > span {
+      animation: opaque 1s ease-in-out;
+    }
+  }
+  .Navbar {
+    > .NavLogoContainer {
+      width: 6vw;
+
+      > img {
+        width: 6vw;
+      }
+    }
+
+    > .NavSearchLocationContainer {
+      width: 60vw;
+      flex-direction: row;
+      justify-content: flex-end;
+
+      > .searchContainer {
+        flex: 1 1 6vw;
+        height: 6vw;
+        margin-right: 1vw;
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: #ffffff;
+        border-radius: 60px;
+        > .searchBar {
+          display: none;
+          flex: 1;
+          height: 5vw;
+          padding: 0.5vw 1vw;
+          font-size: 2.5vw;
+        }
+
+        > .goBtn {
+          left: unset;
+          right: 0;
+          background-color: #ffffff;
+          > img {
+            width: 4vw;
+          }
+        }
+      }
+      > .locationContainer {
+        width: 53vw;
+        padding: 0;
+        border-radius: 60px;
+        background-color: #ffffff;
+
+        > .locationIconWrap {
+          width: 6vw;
+          margin: 0;
+
+          > img {
+            width: 6vw;
+          }
+        }
+
+        > .locationSelector {
+          display: flex;
+          width: 32vw;
+          height: 4vw;
+          padding: 1vw;
+          align-items: center;
+          justify-content: flex-start;
+          text-decoration: underline;
+          font-size: 3vw;
+          color: black;
+        }
+        > .locationSelector::after {
+          width: 0.6vw;
+          height: 0.6vw;
+          margin-left: 1vw;
+          border-right: 2px solid #000000;
+          border-bottom: 2px solid #000000;
+        }
+        @media only screen and (max-width: 425px) {
+          .locationSelector::after {
+            border-right: 1px solid #000000;
+            border-bottom: 1px solid #000000;
+            transform: translateY(-0.1vw) rotate(45deg);
+          }
+        }
+      }
+    }
+
+    > .NavBtnContainer {
+      display: flex;
+      width: 20vw;
+      align-items: center;
+      justify-content: space-between;
+      > .gtcBtn {
+        border-radius: 60px;
+        > img {
+          width: 4vw;
+          margin-right: 0;
+        }
+        > span {
+          display: none;
+        }
+      }
+      > .NavBtn {
+        border-radius: 60px;
+        > img {
+          display: block;
+          width: 4vw;
+          margin: 0;
+        }
+        > span {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 425px) {
+}

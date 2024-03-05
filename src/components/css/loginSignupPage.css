@@ -1,0 +1,122 @@
+.loginFormContainer,
+.signupFormContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  width: 100vw;
+  > form {
+    width: 35vw;
+    padding: 1vw 0;
+    > h2 {
+      color: greenyellow;
+      padding: 1vw;
+    }
+    > .error {
+      min-width: 50%;
+      position: relative;
+      left: 50%;
+      transform: translate(-50%);
+      font-size: 1vw;
+      color: red;
+      padding: 0.5vw 1vw;
+    }
+    > .inputContainer {
+      width: 35vw;
+      margin-bottom: 1vw;
+      > label {
+        display: block;
+        text-align: start;
+        color: greenyellow;
+        font-size: 1.5vw;
+        padding: 0.5vw;
+      }
+      > input {
+        border: none;
+        border-radius: 10px;
+        width: 33vw;
+        padding: 1vw;
+        color: black;
+      }
+      > input:focus {
+        outline: none;
+      }
+    }
+  }
+  > p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+    font-size: 1.5vw;
+    padding: 1vw;
+    color: #ffffff;
+  }
+  > .forgotPasswordBtn {
+    padding: 1vw;
+    color: #ffffff;
+    background-color: unset;
+    border: none;
+    font-size: 1.5vw;
+    cursor: pointer;
+  }
+}
+.pBtn {
+  padding: 1vw;
+  background-color: greenyellow;
+  border: none;
+  border-radius: 10px;
+  color: black;
+  font-size: 1.5vw;
+  font-weight: bold;
+  cursor: pointer;
+}
+@media only screen and (max-width: 760px) {
+  .loginFormContainer,
+  .signupFormContainer {
+    > form {
+      width: 100vw;
+      padding: 2vw 0;
+      > h2 {
+        padding: 2vw;
+      }
+      > .error {
+        min-width: 80vw;
+        font-size: 3vw;
+        padding: 1vw;
+      }
+      > .inputContainer {
+        width: 70vw;
+        margin-bottom: 2vw;
+        padding: 0 15vw;
+        > label {
+          font-size: 4vw;
+          padding: 1vw;
+        }
+        > input {
+          width: 66vw;
+          padding: 2vw;
+        }
+        > input:focus {
+          outline: none;
+        }
+      }
+    }
+    > p {
+      width: 94vw;
+      font-size: 4vw;
+      padding: 3vw;
+    }
+    > .forgotPasswordBtn {
+      padding: 3vw;
+      font-size: 4vw;
+    }
+  }
+  .pBtn {
+    padding: 3vw;
+    font-size: 3vw;
+  }
+}
+@media only screen and (max-width: 425px) {
+}
